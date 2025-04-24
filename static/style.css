@@ -1,0 +1,99 @@
+/* static/style.css */
+/* Appliquer une image de fond */
+body {
+    background-image: url("/static/1.jpg"); /* Chemin vers ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 1rem 1.25rem;
+}
+
+.btn-primary {
+    background-color: #ff1493;
+    border-color: #ff1493;
+}
+
+.btn-primary:hover {
+    background-color: #ff1493;
+    border-color: #ff1493;
+}
+
+/* Lien normal */
+a {
+    color: #ff69b4; /* rose */
+    text-decoration: none; /* retire le soulignement si tu veux */
+}
+
+/* Lien au survol */
+a:hover {
+    color: #ff1493; /* rose plus foncé au survol */
+    text-decoration: underline; /* ou 'none' selon ton style préféré */
+}
+
+.custom-header {
+    background-color: #ff1493; /* rose clair */
+    color: white; /* texte blanc */
+}
+header h1 {
+    color: white;
+}
+
+.lead {
+    color: white;
+    font-weight: 300;
+}
+
+
+
+/* Gestion du texte "Welcome, {{ session.username }}" et du lien "Logout" */
+header .text-white {
+    color: white !important; /* Assurer que le texte "Welcome" est en blanc */
+}
+
+a.btn.btn-danger {
+    background-color: #dc3545 !important; /* Assurer que le bouton 'Logout' est rouge */
+    border-color: #dc3545 !important; /* Bordure rouge */
+    color: white !important; /* Texte du bouton en blanc */
+}
+
+/* Autres ajustements si nécessaire */
+header .btn-danger {
+    color: white !important;
+}
+
+
+
+
+
+/* Style personnalisé pour garantir que la couleur du bouton est rouge et le texte est blanc */
+.btn-danger {
+    background-color: #dc3545 !important; /* Couleur rouge */
+    border-color: #dc3545 !important; /* Bordure rouge */
+    color: white !important; /* Texte du bouton en blanc */
+}
+
+.text-white {
+    color: #ffffff !important; /* Texte blanc */
+}
+
+/* Si vous avez d'autres règles qui affectent les boutons .btn-danger */
+.btn.btn-danger {
+    background-color: #dc3545 !important; /* S'assure que tous les boutons avec btn-danger restent rouges */
+    border-color: #dc3545 !important;
+    color: white !important; /* Texte du bouton en blanc */
+}
+

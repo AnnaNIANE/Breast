@@ -1,0 +1,55 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Breast Cancer Prediction Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-4">
+            <h1>About the Breast Cancer Prediction Tool</h1>
+        </header>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <h2 class="card-title">Project Information</h2>
+                        <p>This application uses machine learning to predict whether a breast mass is benign or malignant based on various features derived from a digitized image of a fine needle aspirate (FNA) of the breast mass.</p>
+                        
+                        <h3 class="mt-4">The Dataset</h3>
+                        <p>The model was built using the Breast Cancer Wisconsin (Diagnostic) Data Set available on the <a href="https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(diagnostic)" target="_blank">UCI Machine Learning Repository</a>. This dataset includes features computed from digitized FNA images of breast mass samples, capturing key characteristics of the cell nuclei. The data provides a foundation for making informed predictions about the malignancy of a breast mass.</p>
+                        
+                        <h3 class="mt-4">The Model</h3>
+                        <p>For prediction purposes, we used a Random Forest classifier. This model was trained on 80% of the data and evaluated on the remaining 20%. The classifier achieved a high accuracy rate, with over 95% correct predictions on the test set. This performance demonstrates the model's effectiveness in diagnosing breast cancer from image-based data.</p>
+                        
+                        <h3 class="mt-4">Features Used</h3>
+                        <p>The features used in this model include measurements such as:</p>
+                        <ul>
+                            <li>Radius (mean of distances from center to points on the perimeter)</li>
+                            <li>Texture (standard deviation of gray-scale values)</li>
+                            <li>Perimeter</li>
+                            <li>Area</li>
+                            <li>Smoothness (local variation in radius lengths)</li>
+                            <li>Compactness (perimeter² / area - 1.0)</li>
+                            <li>Concavity (severity of concave portions of the contour)</li>
+                            <li>Concave points (number of concave portions of the contour)</li>
+                            <li>Symmetry</li>
+                            <li>Fractal dimension ("coastline approximation" - 1)</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="{{ url_for('index') }}" class="btn btn-primary">Return to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
