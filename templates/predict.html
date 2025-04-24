@@ -13,8 +13,9 @@
         <header class="d-flex justify-content-between align-items-center py-3 mb-4 border-bottom">
             <h1>Breast Cancer Prediction Tool</h1>
             <div>
-                <span class="me-3">Welcome, {{ session.username }}</span>
-                <a href="{{ url_for('logout') }}" class="btn btn-outline-secondary">Logout</a>
+                <span class="me-3" style="color: white;">Welcome, {{ session.username }}</span>
+
+                <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
             </div>
         </header>
         
@@ -30,9 +31,9 @@
                                 <div class="col-md-12 mb-3">
                                     <p class="text-muted">Enter the values for the following features computed from a digitized image of a fine needle aspirate (FNA) of a breast mass.</p>
                                     <div class="mb-3">
-                                        
-                                        <button type="button" class="btn btn-sm btn-outline-secondary" id="clearForm">Clear Form</button>
+                                        <button type="button" class="btn btn-sm btn-success" id="clearForm">Clear Form</button>
                                     </div>
+                                    
                                 </div>
                             </div>
 
